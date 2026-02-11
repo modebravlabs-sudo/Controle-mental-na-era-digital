@@ -17,12 +17,13 @@
     </main>
 
      <!--para Video da pagina-->
-   <div class="video-container">
-    <div class="video-container">
-  <video controls width="600">
-    <source src="https://dl.dropboxusercontent.com/s/ibny1lqtg9bm591sp7brk/controle_e_produtividade_mental.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo HTML5.
-  </video>
+  <div class="video-container">
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/9R8Ws0j4y7U" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
 </div>
 
   </div>
@@ -173,7 +174,7 @@ main img {
 
 .video-container {
   position: relative;
-  width: 100%;          /* ocupa metade a largura disponível */
+  max-width: 100%;        /* ocupa metade a largura disponível */
   padding-bottom: 56.25%; /* proporção 16:9 */
   height: 0;
   overflow: hidden;
@@ -182,14 +183,15 @@ main img {
   box-shadow: 10px 8px 18px rgb(3, 103, 150);
 }
 
-.video-container source {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;          /* ajusta à largura do contêiner */
-  height: 100%;         /* mantém proporção */
-}
-
+.video-container iframe, 
+    .video-container video { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        border: none;
+    }
 
 
 /*Titulosde conteudo*/
@@ -338,6 +340,7 @@ footer a {
 </body>
 
 </html>                                                                             
+
 
 
 
